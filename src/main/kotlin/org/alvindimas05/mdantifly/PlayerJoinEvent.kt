@@ -11,23 +11,17 @@ class PlayerEvent (
 ): Listener {
     @EventHandler
     fun onPlayerInteract(event: PlayerInteractEvent){
-        if(plugin.dungeonWorlds.any { event.player.world.name.startsWith(it) }) {
-            plugin.disablePlayerFlight(event.player)
-        }
+        plugin.disablePlayerFlight(event.player)
     }
 
     @EventHandler
     fun onPlayerInventoryClick(event: PlayerInventorySlotChangeEvent){
-        if(plugin.dungeonWorlds.any { event.player.world.name.startsWith(it) }) {
-            plugin.disablePlayerFlight(event.player)
-        }
+        plugin.disablePlayerFlight(event.player)
     }
 
 
     @EventHandler
     fun onPlayerMove(event: PlayerMoveEvent){
-        if(plugin.dungeonWorlds.any { event.player.world.name.startsWith(it) }) {
-            plugin.disablePlayerFlight(event.player)
-        }
+        plugin.disablePlayerFlight(event.player)
     }
 }

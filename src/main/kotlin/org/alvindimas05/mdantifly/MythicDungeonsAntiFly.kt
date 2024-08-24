@@ -1,6 +1,8 @@
 package org.alvindimas05.mdantifly
 
 import org.bukkit.Bukkit
+import org.bukkit.GameMode
+import org.bukkit.World
 import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
@@ -49,6 +51,8 @@ class MythicDungeonsAntiFly : JavaPlugin() {
     }
 
     fun disablePlayerFlight(player: Player) {
+        if(!dungeonWorlds.any { player.world.name.startsWith(it) } || player.gameMode != GameMode.SURVIVAL) return
+
         if(player.allowFlight || player.isFlying){
             player.allowFlight = false
             player.isFlying = false
