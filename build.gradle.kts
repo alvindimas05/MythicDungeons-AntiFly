@@ -14,15 +14,10 @@ repositories {
     maven("https://oss.sonatype.org/content/groups/public/") {
         name = "sonatype"
     }
-    maven {
-        name = "aestrusReleases"
-        url = uri("https://maven.aestrus.io/releases")
-    }
 }
 
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.21-R0.1-SNAPSHOT")
-    implementation("net.playavalon:MythicDungeons:1.3.0-SNAPSHOT")
     implementation("org.jetbrains.kotlin:kotlin-stdlib")
 }
 
