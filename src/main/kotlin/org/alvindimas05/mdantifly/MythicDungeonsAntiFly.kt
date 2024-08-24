@@ -39,6 +39,7 @@ class MythicDungeonsAntiFly : JavaPlugin() {
 
     fun reloadEvents(){
         reloadConfig()
+        reloadWorlds()
         if(!config.getBoolean("enabled")){
             return
         }
