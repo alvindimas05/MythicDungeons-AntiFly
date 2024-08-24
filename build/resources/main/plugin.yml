@@ -1,0 +1,12 @@
+name: MythicDungeons-AntiFly
+authors: [alvindimas05]
+version: 1.0-SNAPSHOT
+api-version: 1.21
+main: org.alvindimas05.mdantifly.MythicDungeonsAntiFly
+depend:
+  - MythicDungeons
+commands:
+  mythicdungeonsantifly:
+    description: The main command of MythicDungeons-AntiFly
+  mdantifly:
+    description: The main command of MythicDungeons-AntiFly
